@@ -1,0 +1,4 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Libraries -I ..\Application\LED -I ..\Application\BEEP -I ..\Application\KEY -I ..\Application\SYS -I ..\Application\DELAY
+-IC:\Users\juice\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.0.0\Device\Include
+-D__UVISION_VERSION="536" -DSTM32F10X_HD -DSTM32F10X_HD
+-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d "..\Application\LED\led.c"
