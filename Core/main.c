@@ -14,7 +14,7 @@ int main(void)
 	{
 		
 		key = key_debounce();
-		if(key == 6)
+		if(key == 1)
 		{
 			LED0 = 0;//LED1 = 0;
 			DelayMs(500);
@@ -30,20 +30,13 @@ int main(void)
 		}
 		else if(key == 2)
 		{
-			for(i = 0; i <500; i++)
-			{
-				LED0 = 0;LED1 = 0;
-				DelayMs(500 - i);
-				LED0 = 1;LED1 = 1;
-				DelayMs(i);
-			}
-			for(i = 0; i <500; i++)
-			{
-				LED0 = 1;LED1 = 1;
-				DelayMs(500 - i);
-				LED0 = 0;LED1 = 0;
-				DelayMs(i);
-			}
+			LED1 = 0;
+			LED0 = 0;
+		}
+		else if(key == 3)
+		{
+						LED1 = 1;
+			LED0 = 1;
 		}
 	}
 }

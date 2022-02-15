@@ -41,26 +41,20 @@ void key_init(void)
 u8 key_debounce(void)
 {
     static u8 key_flag = 0;
-    if(WAKE_UP && key_flag == 0)
+    if((KEY0 == 0 || KEY1 == 0 || KEY2 ==0)&& key_flag == 0)
     {
         DelayMs(30);
-        if(WAKE_UP)
+        //if(KEY0 == 0 || KEY1 == 0 || KEY2 ==0)
         {
             
             key_flag = 1;
-            if(WAKE_UP)
-            {
-                LED1 = 0;
-               // LED1 = 1;
-                return 6;
-            }
-            /* else if(KEY0 == 0)return 2;
-            else if(KEY1 == 0)return 3;
-            else if(KEY2 == 0)return 4; */
+            if(KEY0 == 0)return 1;
+            else if(KEY1 == 0)return 2;
+            else if(KEY2 == 0)return 3;
         }
         
     }
-    else if((WAKE_UP == 0))
+    else if(KEY0 && KEY1 && KEY2)
     {
         key_flag = 0;
     }

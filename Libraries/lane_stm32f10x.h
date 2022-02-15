@@ -6,9 +6,9 @@
 #endif
 
 /* Peripheral Base  */
-#define PERIPHERAL_ADDR            ((u32)0x40000000)
+#define PERIPHERAL_ADDR            ((uint32_t)0x40000000)
 /* APB2 base address */
-#define APB2_ADDR           (PERIPHERAL_ADDR + 10000)
+#define APB2_ADDR           (PERIPHERAL_ADDR + 0x10000)
 /* Each GPIO address  */
 #define GPIO_A_BASE               (APB2_ADDR + 0x0800)
 #define GPIO_B_BASE               (APB2_ADDR + 0x0C00)
